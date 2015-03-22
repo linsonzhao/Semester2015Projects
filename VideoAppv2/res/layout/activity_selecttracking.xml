@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10" >
+
+    <VideoView
+        android:id="@+id/videoToTrack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_launcher"
+        android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:id="@+id/view_drawing_pad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/videoToTrack"
+            android:layout_alignLeft="@+id/videoToTrack"
+            android:layout_alignTop="@+id/videoToTrack"
+            android:layout_alignBaseline="@+id/videoToTrack"
+            android:orientation="vertical"
+            android:weightSum="10" >
+
+        </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:max="200"
+        android:progress="100" />
+
+</RelativeLayout>

@@ -1,0 +1,169 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.exemplo.videoapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT" /> 
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.flash" /> 
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <permission android:name="com.example.gcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" /> 
+         
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <receiver
+            android:name="video.app.demo.gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+        <service android:name="video.app.demo.gcm.GcmIntentService" />
+        
+        
+        <meta-data android:name="com.google.android.gms.version"
+	        android:value="@integer/google_play_services_version" />
+        
+        <activity
+            android:name="video.app.demo.SelectAnimal"
+			android:label="@string/app_name"
+            android:theme="@style/Theme.Videoappstyle"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SELECTANIMAL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+                                
+        <activity
+            android:name="video.app.demo.MainMenu"
+			android:label="@string/app_name"
+            android:theme="@style/Theme.Videoappstyle"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAINMENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+		<activity
+            android:name="video.app.demo.Introduction"
+			android:label="@string/app_name"
+            android:theme="@style/Theme.Videoappstyle"
+            android:screenOrientation="portrait"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+                        
+        <activity
+            android:name="video.app.demo.ActionsList"
+			android:label="@string/app_name"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTIONSLIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>                
+        
+        <activity
+            android:name="video.app.demo.SelectTracking"
+			android:label="@string/app_name"
+            android:theme="@style/Theme.Videoappstyle"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.SELECTTRACKING" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="video.app.demo.TrackingSelection"
+			android:label="@string/app_name"
+            android:theme="@style/Theme.Videoappstyle"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.TRACKINGSELECTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="video.app.demo.SelectVideo"
+			android:label="@string/app_name"
+            android:theme="@style/Theme.Videoappstyle"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SELECTVIDEO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="video.app.demo.Upload"
+			android:label="@string/app_name"
+            android:theme="@style/Theme.Videoappstyle"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.UPLOAD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="video.app.demo.PlayVideo"
+			android:label="@string/app_name"
+            android:theme="@style/Theme.Videoappstyle"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.PLAYVIDEO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="video.app.demo.VideoCapture"
+			android:label="@string/app_name"
+            android:theme="@style/Theme.Videoappstyle"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIDEOCAPTURE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+    </application>
+
+</manifest>
