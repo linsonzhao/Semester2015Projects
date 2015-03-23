@@ -24,7 +24,8 @@ public class Notification {
 	private ConnectionPool cp;
 	
 	public Notification(){
-		apiKey = "AIzaSyCThzimCfqw44KWujyzFsCgWEnJOmz8VsI";
+		//Linson's Google GCM API key
+		apiKey = "AIzaSyC-QeReBnOy_vOlIagZZ8YG7weg96_7DEM";
 		title = "Zoo notification";
 		cp = ConnectionPool.getInstance();
 	}
@@ -106,7 +107,6 @@ public class Notification {
 		for(String s: subList){
 			c.addRegId(s);
 		}
-//		c.addRegId("APA91bFunY_31JrY2SbLQckMEFnvqeFevhphEZI2lXVJlsPJgYX-m5CJCW8pc6RNBF2uwLcd0eQrv3FwMP6Pjo2xfVKiMluohY8rBp0DoFEZqdapxZ8gPrnqk0Pa2776B96FMGIqnqVQ_TW3HY9ubNcg_I-BOdmBRQ");
 		c.createData(title, message, link);
 
 		POST2GCM.post(apiKey, c);

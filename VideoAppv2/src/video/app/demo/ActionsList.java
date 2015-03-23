@@ -33,7 +33,9 @@ public class ActionsList extends SherlockActivity implements
 		OnItemClickListener {
 
 	private List<String> OPTIONS;
-	private final String PROJECT_ID = "227461746139";
+	//Linson's Google GCM project id
+	private final String PROJECT_ID = "860428956593";
+	
 	private InternetUtil iUtil;
 	private Util u;
 	private ListView l;
