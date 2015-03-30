@@ -9,7 +9,7 @@
 	<classpathentry exported="true" kind="lib" path="libs/httpclient-4.3.3.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/httpcore-4.3.2.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/google-play-services_lib"/>
-	<classpathentry kind="lib" path="C:/android-sdks/extras/android/support/v4/android-support-v4.jar"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="lib" path="C:/android-sdk/extras/android/support/v4/android-support-v4.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
