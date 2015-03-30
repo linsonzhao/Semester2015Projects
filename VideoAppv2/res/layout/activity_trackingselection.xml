@@ -23,7 +23,7 @@
         android:layout_weight="1"
         android:visibility="visible" >
 
-        <video.app.demo.views.ScallingImageView
+        <video.app.com.views.ScallingImageView
             android:id="@+id/videoToTrack"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
