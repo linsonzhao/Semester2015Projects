@@ -11,7 +11,7 @@ public class Scheduler {
 	public void scheduleControl(){
 
 		masterTimer = new Timer();
-		masterTimer.schedule(new MasterTask(), new Date(), 1000*60*5);  //5 minutes cycle
+		masterTimer.schedule(new MasterTask(), new Date(), 1000*60*60);  //5 minutes cycle
 	}
 	
 	public void cleanUp(){

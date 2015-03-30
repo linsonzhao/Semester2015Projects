@@ -16,35 +16,35 @@ public class Video {
 	@Id
 	@Column(name = "videoId")
 	private int videoId;
-	
+
 	@Column(name = "target")
 	private String target;
-	
+
 	@Column(name = "videoFile")
 	private String videoFile;
-	
-	@Column(name="size")
+
+	@Column(name = "size")
 	private int size; // how many kB
-	
-	@Column(name="description")
+
+	@Column(name = "description")
 	private String description;
-	
-	@Column(name="tracking")
+
+	@Column(name = "tracking")
 	private boolean tracking;
-	
-	@Column(name="createdTime")
+
+	@Column(name = "createdTime")
 	private Date createdTime;
-	
-	@Column(name="duration")
+
+	@Column(name = "duration")
 	private int duration; // how many seconds
-	
-	@Column(name="codecId")
+
+	@Column(name = "codecId")
 	private String codecId;
-	
-	@Column(name="width")
+
+	@Column(name = "width")
 	private int width;
-	
-	@Column(name="height")
+
+	@Column(name = "height")
 	private int height;
 
 	public Video() {
